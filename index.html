@@ -11,26 +11,26 @@
   <div class="card">
     <div class="search">
       <input type="text" placeholder="Enter City Name" spellcheck="false" />
-      <button><img src="assets/images/search.png" alt="Search"/></button>
+      <button><img src="assets/search.png" alt="Search"/></button>
     </div>
     <div class="error">
       <p>Invalid city name</p>
     </div>
 
     <div class="weather">
-      <img src="assets/images/rain.png" class="weather-icon" alt="Weather Icon"/>
+      <img src="assets/rain.png" class="weather-icon" alt="Weather Icon"/>
       <h1 class="temp">22°C</h1>
       <h2 class="city">New York</h2>
 
       <div class="details">
         <div class="col">
-          <img class="img1" src="assets/images/humidity.png" alt="Humidity"/>
+          <img class="img1" src="assets/humidity.png" alt="Humidity"/>
           <p class="humidity">50%</p>
           <p>Humidity</p>
         </div>
 
         <div class="col">
-          <img src="assets/images/wind.png" alt="Wind Speed"/>
+          <img src="assets/wind.png" alt="Wind Speed"/>
           <p class="wind">15 km/h</p>
           <p>Wind Speed</p>
         </div>
@@ -61,22 +61,22 @@ const weatherIcon = document.querySelector(".weather-icon")
     document.querySelector(".wind").innerHTML = data.wind.speed +"km/h";
 
     if(data.weather[0].main == "Clouds"){
-      weatherIcon.src = "assets/images/clouds.png"
+      weatherIcon.src = "assets/clouds.png"
     }
     else if(data.weather[0].main == "Clear"){
-      weatherIcon.src = "assets/images/clear.jpg"
+      weatherIcon.src = "assets/clear.jpg"
     }
     else if(data.weather[0].main == "Rain"){
-      weatherIcon.src = "assets/images/rain.png"
+      weatherIcon.src = "assets/rain.png"
     }
     else if(data.weather[0].main == "Drizzle"){
-      weatherIcon.src = "assets/images/drizzle.jpeg"
+      weatherIcon.src = "assets/drizzle.jpeg"
     }
     else if(data.weather[0].main == "Mist"){
-      weatherIcon.src = "assets/images/mist.jpeg"
+      weatherIcon.src = "assets/mist.jpeg"
     }
     else if(data.weather[0].main == "Snow"){
-      weatherIcon.src = "assets/images/snow.png"
+      weatherIcon.src = "assets/snow.png"
     }
 
       document.querySelector(".weather").style.display = "block";
